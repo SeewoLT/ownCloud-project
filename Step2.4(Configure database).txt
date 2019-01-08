@@ -1,0 +1,4 @@
+CREATE DATABASE owncloud;
+CREATE USER 'oc_user'@'localhost' IDENTIFIED BY 'YOUR_PASSWORD_HERE';
+GRANT ALL PRIVILEGES ON owncloud.* TO 'oc_user'@'localhost';
+FLUSH PRIVILEGES;

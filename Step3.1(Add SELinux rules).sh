@@ -1,0 +1,6 @@
+semanage fcontext -a -t httpd_sys_rw_content_t '/var/www/html/owncloud/data(/.*)?'
+semanage fcontext -a -t httpd_sys_rw_content_t '/var/www/html/owncloud/config(/.*)?'
+semanage fcontext -a -t httpd_sys_rw_content_t '/var/www/html/owncloud/apps(/.*)?'
+semanage fcontext -a -t httpd_sys_rw_content_t '/var/www/html/owncloud/.htaccess'
+semanage fcontext -a -t httpd_sys_rw_content_t '/var/www/html/owncloud/.user.ini'
+restorecon -Rv '/var/www/html/owncloud/'
